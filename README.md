@@ -7,22 +7,22 @@ Project Laravel untuk manajemen TODO sederhana.
 Berikut adalah tampilan aplikasi:
 
 - **Instalasi**  
-  ![Install](screenshots/install.png)
+  ![Install](screenshot/install.png)
 
 - **Halaman Registrasi**  
-  ![Register](screenshots/register.png)
+  ![Register](screenshot/register.png)
 
 - **Halaman Login**  
-  ![Login](screenshots/login.png)
+  ![Login](screenshot/login.png)
 
 - **Dashboard**  
-  ![Dashboard](screenshots/dashboard.png)
+  ![Dashboard](screenshot/dashboard.png)
 
 - **Tampilan Database**  
-  ![Database](screenshots/database.png)
+  ![Database](screenshot/database.png)
 
 - **Tampilan Code Web**  
-  ![Database](screenshots/web.jpg)
+  ![Database](screenshot/web.jpg)
 
 
 ## Instalasi
