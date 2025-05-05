@@ -20,9 +20,12 @@
                         {{ __('Todo') }}  
                     </x-nav-link>  
 
-                    <x-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">  
+
+                    @can('admin')  
+                    <x-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">  
                         {{ __('User') }}  
                     </x-nav-link>  
+                    @endcan
                 </div>
             </div>
 
@@ -83,7 +86,7 @@
             {{ __('Todo') }}  
             </x-responsive-nav-link>  
 
-            <x-responsive-nav-link :href="route('users.index')" :active="request()->routeIs('users.index')">  
+            <x-responsive-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">  
                 {{ __('User') }}  
             </x-responsive-nav-link>  
 
