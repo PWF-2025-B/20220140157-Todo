@@ -4,6 +4,7 @@
      use App\Http\Controllers\TodoController;
      use App\Http\Controllers\UserController;
      use Illuminate\Support\Facades\Route;
+     use App\Http\Controllers\CategoryController;
  
      // Route utama (halaman welcome)
      Route::get('/', function () {
@@ -36,7 +37,10 @@
          Route::patch('/todo/{todo}', [TodoController::class, 'update'])->name('todo.update');
  
          Route::delete('/todo/{todo}', [TodoController::class, 'destroy'])->name('todo.destroy');
-         Route::delete('/todo', [TodoController::class, 'destroyCompleted'])->name('todo.deleteallcompleted');
+         Route::resource('category', CategoryController::class)->except(['show']);
+         
+
+
         });
  
         Route::middleware(['auth', 'admin'])->group(function() {
