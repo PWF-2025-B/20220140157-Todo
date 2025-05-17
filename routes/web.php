@@ -53,3 +53,9 @@
  
          Route::resource('user', UserController::class)->except(['show']);
         });
+
+   
+Route::get('/pzn', function (){
+    return "Hello Programmer Zaman Now";
+});
+
