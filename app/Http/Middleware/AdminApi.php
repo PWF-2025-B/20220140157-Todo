@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class Admin
+class AdminApi
 {
     /**
      * Handle an incoming request.
@@ -18,12 +18,14 @@ class Admin
 
     public function handle(Request $request, Closure $next): Response
      {
-        if($request -> user() && $request -> user() -> is_admin){
-            return $next($request);
+        $user = Auth::guard('api')->user();
+        if (!$user || !$user->is_admin){
+            return response()->json([
+                'success' => false,
+                'message' => 'Unauthorized access',
+            ], Response::HTTP_UNAUTHORIZED);
         }
-        return redirect()->route('dashboard');
-
+        return $next($request);
     }
-
 
 }
